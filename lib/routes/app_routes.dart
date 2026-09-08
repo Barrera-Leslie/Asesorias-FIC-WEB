@@ -8,11 +8,13 @@ import 'package:asesorias_fic/presentation/pageDirection/asesorias_en_curso_scre
 import 'package:asesorias_fic/presentation/pageDirection/estudiantes_screen.dart';
 import 'package:asesorias_fic/presentation/pageDirection/solicitudes_penidentes_screen.dart';
 import 'package:asesorias_fic/presentation/selectorSistemas/selector_sistemas_screen.dart';
+import 'package:asesorias_fic/presentation/sistemaAsistencias/rol_administrador_as/asistencia/toma_asistencia.dart';
 import 'package:asesorias_fic/presentation/sistemaAsistencias/rol_administrador_as/pagina_base_administrador_as.dart';
 import 'package:asesorias_fic/presentation/sistemaAsistencias/rol_administrador_as/reportes/reportes_screen.dart';
 import 'package:asesorias_fic/presentation/sistemaTutorias/rol_administrador/asesorDiciplinar/crear_asesor_disiplinar.dart';
 import 'package:asesorias_fic/presentation/sistemaTutorias/rol_administrador/asesorPar/crear_asesor_par.dart';
 import 'package:asesorias_fic/presentation/sistemaTutorias/rol_administrador/asesorPar/informacion_asesor_par.dart';
+import 'package:asesorias_fic/presentation/sistemaTutorias/rol_administrador/estudiantes/tabla_estudiantes.dart';
 import 'package:asesorias_fic/presentation/sistemaTutorias/rol_administrador/pagina_base_administrador.dart';
 import 'package:asesorias_fic/presentation/sistemaTutorias/rol_asesor/pagina_base_asesor.dart';
 import 'package:asesorias_fic/presentation/sistemaTutorias/rol_estudiante/pagina_base_estudiante.dart';
@@ -21,7 +23,7 @@ import 'package:asesorias_fic/presentation/sistemaTutorias/rol_estudiante/solici
 import 'package:flutter/widgets.dart';
 
 class AppRoutes {
-  static const initialRoute = '/selectorSistema';
+  static const initialRoute = '/tablaEstudiantes';
 
   static Map<String, WidgetBuilder> routes = {
     //Login actual - actualizado
@@ -60,18 +62,17 @@ class AppRoutes {
 
     '/loginNuevo': (context) => const LoginNuevo(),
 
-    //Direccion de conocenos
-    '/paginaConocenos': (conttext) => const Conocenos(),
-
-    '/inicioSesion': (context) => const InicioSesion(),
-
     //Selector de modulos de cada sistema
     '/selectorSistema': (context) => const SelectorSistemasScreen(),
 
     //Rutas del sistema de Asistencias/Chechacor
 
-    //Paagina base del adminstrador del sistema de asistencia
+    //Direcciones base del adminstrador del sistema de asistencia
     '/paginaBaseAdministradorAs': (context) =>
         const PaginaBaseAdministradorAs(),
+
+    '/tomaDeAsistencia': (context) => const TomaAsistencia(),
+
+    '/tablaEstudiantes': (context) => const TablaEstudiantes(),
   };
 }
